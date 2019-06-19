@@ -1,0 +1,13 @@
+2019-06-19 10:56:19,649 | INFO     | Hyper-parameters: defaultdict(None, {'num_epochs': 10, 'training_shuffle_num': 50, 'glove_dir': 'glove.6B', 'model': 'cnn_classfier', 'embedding_dim': 300, 'graph': <module 'models.cnn_classifier' from '/home/taesun/taesun_work/github/sentiment_analysis_tutorial/models/cnn_classifier.py'>, 'data_dir': './amazon_reviews/', 'train_batch_size': 64, 'eval_batch_size': 200, 'out_classes': ['POS', 'NEG'], 'dropout_keep_prob': 0.8, 'root_dir': './runs/cnn_classifier', 'task_name': 'sentiment_analysis', 'glove_embedding_path': './glove.6B/glove.6B.300d.trimmed.npz', 'num_filters': 100, 'filter_size': [3, 4, 5], 'vocab_path': './amazon_reviews/vocab.txt'}) | 47:train_model
+2019-06-19 10:56:23,150 | WARNING  | From /home/taesun/taesun_work/github/sentiment_analysis_tutorial/models/cnn_classifier.py:58: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with distribution=normal is deprecated and will be removed in a future version.
+Instructions for updating:
+`normal` is a deprecated alias for `truncated_normal` | 125:warning
+2019-06-19 10:56:23,358 | INFO     | Batch iteration per epoch is 282 | 84:train
+2019-06-19 10:56:24,633 | INFO     | Start train model at 10:56:24 | 88:train
+2019-06-19 10:56:27,951 | INFO     | [Step 10] loss: 0.7052, accuracy: 56.88% | 113:train
+2019-06-19 10:56:29,893 | INFO     | [Step 20] loss: 0.7016, accuracy: 61.72% | 113:train
+2019-06-19 10:56:31,920 | INFO     | [Step 30] loss: 0.5723, accuracy: 69.06% | 113:train
+2019-06-19 10:56:33,770 | INFO     | [Step 40] loss: 0.5069, accuracy: 75.00% | 113:train
+2019-06-19 10:56:35,457 | INFO     | [Step 50] loss: 0.5501, accuracy: 72.50% | 113:train
+2019-06-19 10:56:36,661 | INFO     | [Step 60] loss: 0.5125, accuracy: 74.53% | 113:train
+2019-06-19 10:56:38,403 | INFO     | [Step 70] loss: 0.5104, accuracy: 73.59% | 113:train
