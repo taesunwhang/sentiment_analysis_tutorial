@@ -2,8 +2,8 @@
 Convolution Neural Networks for Sentiment Analysis (Tutorial)
 
 ### Prepare Dataset, Make Vocabulary and GLoVE Embeddings
-The full dataset is publicly available in https://www.kaggle.com/bittlingmayer/amazonreviews
-The original GLoVE embedding is avaliable in  https://nlp.stanford.edu/projects/glove/
+The full dataset is publicly available in https://www.kaggle.com/bittlingmayer/amazonreviews  
+The original GLoVE embedding is avaliable in  https://nlp.stanford.edu/projects/glove/   
 To sample data from the full dataset, run
     
     python3 data_utils.py
