@@ -91,7 +91,7 @@ class TextClassifier:
                 if epoch_completed > 0 and self.hparams.training_shuffle_num > 0:
                     self.train_examples = self.processor.get_train_examples(self.hparams.data_dir)
 
-                step_loss_mean, step_accuracy_mean = 0, 0
+                step_loss_mean, step_accuracy_mean, print_step_count = 0, 0, 0
                 for i in range(total_data_len):
                     batch_data = self.processor.get_batch_data(i, self.hparams.train_batch_size, "train")
 
@@ -104,15 +104,15 @@ class TextClassifier:
                     )
                     step_loss_mean += loss_val
                     step_accuracy_mean += accuracy_val
+                    print_step_count += 1
 
-
-                    if global_step_val % 10 == 0:
-                        step_loss_mean /= 10
-                        step_accuracy_mean /= 10
+                    if global_step_val % self.hparams.print_step == 0:
+                        step_loss_mean /= print_step_count
+                        step_accuracy_mean /= print_step_count
                         self._logger.info("[Step %d] loss: %.4f, accuracy: %.2f%%" % (
                             global_step_val, step_loss_mean, step_accuracy_mean * 100))
 
-                        step_loss_mean, step_accuracy_mean = 0, 0
+                        step_loss_mean, step_accuracy_mean, print_step_count = 0, 0, 0
 
                 self._logger.info("End of epoch %d." % (epoch_completed + 1))
                 save_path = saver.save(self.sess, "%s/model_ckpt/model.ckpt" % self.hparams.root_dir, global_step=global_step_val)

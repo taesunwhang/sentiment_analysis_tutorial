@@ -15,6 +15,7 @@ BASE_PARAMS = defaultdict(
 		glove_dir = "glove.6B",
 		embedding_dim = 300,
 		dropout_keep_prob = 0.8,
+		print_step = 10,
 
 		glove_embedding_path = "./glove.6B/glove.6B.300d.trimmed.npz",
 		vocab_path = "./amazon_reviews/vocab.txt",

@@ -45,7 +45,7 @@ class AmazonReviewsProcessor(object):
 		for i in range(shuffle_num):
 			# print(i + 1, "th shuffling has finished!")
 			random.shuffle(inputs)
-		print("Shuffling total %d process is done! Total dialog context : %d" % (shuffle_num, len(inputs)))
+		print("Shuffling total %d process is done! Total data length : %d" % (shuffle_num, len(inputs)))
 
 		return inputs
 
